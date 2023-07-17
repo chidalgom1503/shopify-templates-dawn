@@ -285,6 +285,7 @@
                     <div>
                       {%- if product.selected_or_first_available_variant.compare_at_price
                           > product.selected_or_first_available_variant.price
+                        and product.quantity_price_breaks_configured?
                       -%}
                         <span>
                           <s class="price-item price-item--regular">
